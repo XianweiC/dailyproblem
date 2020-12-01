@@ -1,0 +1,34 @@
+# JavaScript显示网页倒计时
+
+```
+<html>
+<head>
+	
+</head>
+<body>
+
+<h1 id="num">6</h1>
+
+<script>
+	var time = clockOver();
+	function clockOver(){
+				
+		var time = document.getElementById("num");
+				//alert(time.innerHTML);
+				//获取到id为time标签中的内容，现进行判断
+				if(time.innerHTML == 0){
+					//等于0时清除计时
+					return;
+				}else{
+					time.innerHTML = time.innerHTML-1;
+				}
+			}
+			//1000毫秒调用一次
+			if(document.getElementById("num") != 0)
+				window.setInterval("clockOver()",1000);
+	</script>
+</body>
+
+</html>
+```
+
