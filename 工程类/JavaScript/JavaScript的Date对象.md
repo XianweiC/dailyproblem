@@ -19,6 +19,7 @@ function realSysTime(clock) {
     clock.innerHTML = "当前时间：" + time; //显示系统时间
 }
 window.onload = function () {
+    let clock = document.getElementById("clock");
     window.setInterval("realSysTime(clock)", 1000); //实时获取并显示系统时间
 }
 ```
