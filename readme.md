@@ -1,6 +1,6 @@
 # About
 
-## I will use this repo
+## I will use this repo.
 
 ## If you are interested in my problem diary.
 
