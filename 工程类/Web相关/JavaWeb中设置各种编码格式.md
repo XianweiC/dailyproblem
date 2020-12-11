@@ -23,4 +23,4 @@
 
 作用是指定服务器响应给浏览器的编码。同时，浏览器也是根据这个参数来对其接收到的数据进行重新编码（或者称为解码）。
 
-对于发送数据，服务器按照`response.setCharacterEncoding—contentType—pageEncoding`的优先顺序，对要发送的数据进行编码。
+对于发送数据，服务器按照**`response.setCharacterEncoding—>contentType—>pageEncoding`**的优先顺序，对要发送的数据进行编码。
