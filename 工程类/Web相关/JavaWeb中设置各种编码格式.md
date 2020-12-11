@@ -2,7 +2,7 @@
 
 ## 1.**`page Encoding=”UTF-8”`**
 
-作用是设置`JSP`编译成`Servlet`时使用的编码。 
+作用是设置`JSP`页面本身的编码，也就是编译成`Servlet`时使用的编码。 
 
 ## 2.**`contentType=”text/html;charset=UTF-8”`**
 
