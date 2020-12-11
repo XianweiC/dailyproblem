@@ -1,6 +1,6 @@
 # `JavaWeb`中设置各种编码格式
 
-## 1.**`pageEncoding=”UTF-8”`**
+## 1.**`page Encoding=”UTF-8”`**
 
 作用是设置`JSP`编译成`Servlet`时使用的编码。 
 
@@ -10,13 +10,10 @@
 
 ## 3.`request.setCharacterEncoding(“UTF-8”)`
 
-作用是设置对客户端请求和数据库取值时的编码，不指定的话使用`iso-8859-1`。(只解决POST乱码) 
+作用是设置对客户端请求和数据库取值时的编码，不指定的话使用`iso-8859-1`(注：自`Tomcat 8.0`之后，编码格式默认为`UTF-8`)。(只解决POST乱码) 
 
-```
-解决GET乱码可以修改tomcat的server.xml中的 URIEncoding属性 
-或使用 
-str = new String(str.getBytes("iso-8859-1"),"utf-8"); 
-```
+解决GET乱码可以修改tomcat的`server.xml`中的 `URIEncoding`属性 
+或使用`str = new String(str.getBytes("iso-8859-1"),"utf-8");` 
 
 ## 4.`response.setCharacterEncoding(“UTF-8”)`
 
