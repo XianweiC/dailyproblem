@@ -25,3 +25,4 @@
 @webservlet(name = "这里是servlet的name", urlpatterns = "这里制定映射到服务器的地址")
 ```
 
+此时就无需在web.xml中编写配置信息。
