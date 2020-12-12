@@ -43,8 +43,8 @@
 2.由于相似，将include指令和`jsp:include`动作一起说明，方便加以区别
 
 ```jsp
-<%@ include %>//这是include，输入jsp指令
-<jsp:include >//这是jsp动作
+<%@ include file=" "%>//这是include，输入jsp指令
+<jsp:include page=" ">//这是jsp动作
 ```
 
 1>`include`通过file属性指定被包含的文件，并且file属性不支持任何表达式；

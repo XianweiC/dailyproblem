@@ -1,6 +1,10 @@
 # JavaScript显示网页倒计时
 
-```
+## 思路：很好理解，其实就是利用window.setInterval()方法定时修改DOM.
+
+直接看代码：
+
+```html
 <html>
 <head>
 	

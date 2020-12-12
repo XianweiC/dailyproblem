@@ -1,5 +1,20 @@
 # `JavaWeb`中设置各种编码格式
 
+## 引言：JSP中一系列编码格式实在是搞得人晕头转向，下面来整理一下。
+
+先看一段代码：
+
+```jsp
+<%@ page Encoding="UTF-8" contentType="text/html;charset=UTF-8"%>
+```
+
+```java
+request.setCharacterEncoding("UTF-8");
+
+response.setCharacterEncoding("UTF-8");
+response.setContentType("text/html;charset=UTF-8");
+```
+
 ## 1.**`page Encoding=”UTF-8”`**
 
 作用是设置`JSP`页面本身的编码，也就是编译成`Servlet`时使用的编码。 

@@ -1,6 +1,6 @@
 # JavaScript中的Date对象
 
-引言：如果你想在自己的网页上动态地显示当前日期，就可以使用Dare对象来实现啦。。。
+## 引言：如果你想在自己的网页上动态地显示当前日期，就可以使用Dare对象来实现啦
 
 ```javascript
 function realSysTime(clock) {

@@ -1,6 +1,6 @@
 # 针对Vue框架中，computed方法使用注意事项
 
-
+`computed`方法，作为Vue内置的生命周期函数而存在，可以理解为：之前已经声明过，只需要在使用时覆写，不能在methods里重新声明
 
 ```
 Method “computed” has type “object” in the component definition. Did you reference the function correctly?
