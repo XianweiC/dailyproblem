@@ -75,10 +75,10 @@ CREATE PROCEDURE 'name'
 
 ## 存储过程的删除
 
-一句`sql`语句
+一句`sql`语句,使用`proc`简写也可以
 
 ```sql
-1> DROP PROCEDURE getUser;
+1> DROP PROCEDURE/PROC getUser;
 2> go
 1> EXEC getUser 201215121;
 2> go
