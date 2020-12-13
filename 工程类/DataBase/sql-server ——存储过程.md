@@ -14,6 +14,8 @@
 
 --------------------------
 
+## 存储器的创建：
+
 不废话，直接上`sql`：
 
 ```sql
@@ -45,10 +47,10 @@ Sno          Sname                Ssex       Sage   Sdept
 201215130    wubai                female         19 IS                  
 ```
 
-## 执行结果：
+## 存储器的执行：
 
 ```sql
-1> EXEC getUser 201215121;
+1> EXEC getUser 201215121; --EXEC ‘存储器名’ ‘传递的参数’
 2> go
 Sno          Sname                Ssex       Sage   Sdept               
 ------------ -------------------- ---------- ------ --------------------
@@ -57,7 +59,7 @@ Sno          Sname                Ssex       Sage   Sdept
 
 
 
-## 解释一下：
+### 解释一下：
 
 存储过程的的创建包括：声明---->传递的参数---->执行的`sql`部分
 
@@ -70,3 +72,6 @@ CREATE PROCEDURE 'name'
 `@Param `  '参数类型'
 
 执行部分，需要用begin...end包裹
+
+## 存储过程的删除
+
