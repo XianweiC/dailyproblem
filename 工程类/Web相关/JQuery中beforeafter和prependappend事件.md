@@ -1,4 +1,4 @@
-# `JQuery`中`before/after`和`prepend/append`事件
+# `JQuery`中`before/after`和`prepend/append`方法
 
 引言：
 
