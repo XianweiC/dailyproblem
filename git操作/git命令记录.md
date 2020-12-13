@@ -5,7 +5,10 @@ $git update-git-for-windows
 #git版本升级，需要挂梯子
 
 git log
-#查看日志，也就是提交变标号，方便进行回滚
+#查看日志，记录了版本号，方便进行回滚
+
+git reflog
+#查看命令历史，可以在回滚后前进到新版本时查看版本号
 
 git status
 #显示工作区状态，善用status能够及时了解git状态
