@@ -1,4 +1,4 @@
-# sql-server ——存储过程
+# `sql-server` ——存储过程
 
 ## 引言：
 
@@ -74,4 +74,45 @@ CREATE PROCEDURE 'name'
 执行部分，需要用begin...end包裹
 
 ## 存储过程的删除
+
+一句`sql`语句
+
+```sql
+1> DROP PROCEDURE getUser;
+2> go
+1> EXEC getUser 201215121;
+2> go
+Msg 2812, Level 16, State 62, Server ThinkPad-E580, Line 1
+找不到存储过程 'getUser'
+```
+
+## 存储过程的修改
+
+例如修改存储过程的参数、执行的`sql`语句等。
+
+```sql
+ALTER PROCEDURE getUser @Sno int,
+                        @Sage int
+as
+    set nocount on;
+begin
+    select * from Student where Sno = @Sno AND Sage = @Sage
+end;
+```
+
+在这里，我进行了简单修改，也就是增加了一个字段作为`select`条件
+
+```sql
+EXEC getUser 201215121, 20
+```
+
+### 执行结果
+
+```sql
+1> EXEC getUser 201215121, 20
+2> go
+Sno          Sname                Ssex       Sage   Sdept               
+------------ -------------------- ---------- ------ --------------------
+201215121    yong                 male           20 CS                  
+```
 
