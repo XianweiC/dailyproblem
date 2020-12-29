@@ -7,3 +7,26 @@ int length = sizeof(array)/sizeof(array[0]);
 ```
 
 思路：sizeof()返回的是数组所占内存，而sizeof(array[0])返回的是数组第一个元素所占内存，由此可以得出数组长度。
+
+测试一下：
+
+```c++
+#include<cstdio>
+
+#define length(array) sizeof(array)/sizeof(array[0])
+
+int main()
+{
+    int a[] = {0,1,2,3,4};
+    printf("%d",length(a));
+    return 0;
+}
+```
+
+输出：
+
+```
+5
+Process finished with exit code 0
+```
+
