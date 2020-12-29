@@ -3,7 +3,7 @@
 ```
 java.lang.NoClassDefFoundError: net/sf/json/JSONArray  cn.xaut.Servlet.ShowS。。。。
 
-原因是：不但要在project structure中导入jar包，还需要将jar包移动到WEBCONTENT->WEB-INF->lib文件夹下
+原因是：不但要在IDEA中project structure下导入jar包，还需要将jar包移动到WEBCONTENT->WEB-INF->lib文件夹下
 ```
 
 
