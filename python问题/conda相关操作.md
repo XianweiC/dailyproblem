@@ -21,4 +21,9 @@ conda remove -n 'envname' --all
 
 conda active 'envname'
 #进入环境
+
+#如果想要修改环境的python版本
+conda install python=<version>
+#例如：
+conda install python=3.5
 ```
