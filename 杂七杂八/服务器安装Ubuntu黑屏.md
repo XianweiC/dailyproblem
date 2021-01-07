@@ -12,3 +12,18 @@
 上述方法是临时起作用。
 
 编辑`/etc/default/grub`中进行修改，则还需要`sudo update-grub`。这样操作后，重启后就一直使用nomodeset参数了。
+
+## 成功开机后，配置ssh远程连接
+
+```bash
+sudo apt install openssh-server
+
+sudo apt install ufw
+#安装防火墙管理
+sudo uwf enable
+sudo uwf allow 22
+#允许通过22端口连接
+sudo systemctl enable ssh
+#允许ssh自启动
+```
+
