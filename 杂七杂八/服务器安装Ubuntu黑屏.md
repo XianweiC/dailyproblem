@@ -20,8 +20,8 @@ sudo apt install openssh-server
 
 sudo apt install ufw
 #安装防火墙管理
-sudo uwf enable
-sudo uwf allow 22
+sudo ufw enable
+sudo ufw allow 22
 #允许通过22端口连接
 sudo systemctl enable ssh
 #允许ssh自启动
