@@ -5,9 +5,6 @@
 ```
 http://quotes.toscrape.com/
 
-1 5 255 225 100 200 255 200 1 7 254 255 100 10 10 9 3 7 10 100 100 2 9 6 3 6 10 10 9 2 8 2 2 1 8 8 9 3 4 2 1 0 7 8 8 3 2 1 1 1 8 8 7 2 2 1 2 3 9 8 7 2 2 0
-
-
 
 镜像文件
 pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple
