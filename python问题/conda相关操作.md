@@ -27,3 +27,28 @@ conda install python=<version>
 #例如：
 conda install python=3.5
 ```
+
+## 更改镜像源
+
+添加国内源：
+
+```bash
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+
+
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+
+
+
+conda config --set show_channel_urls yes
+```
+
+换回默认源：
+
+```
+conda config --remove-key channels
+```
+
+在执行conda config 命令的时候
+
+会在当前用户目录下创建 .condarc 文件，可以查看更换源前后该文件内容的变化。

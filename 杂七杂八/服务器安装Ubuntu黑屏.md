@@ -5,7 +5,9 @@
 ## 解决方法：
 
 开机grub界面按`e`键，`linux`打头的行，`quiet`后添加`nomodeset`。
- F10保存并启动
+ F10保存并启动，
+
+进入recovery mode来
 
 ## 注意
 
