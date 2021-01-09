@@ -36,7 +36,7 @@ conda --version
 创建虚拟环境
 
 ```bash
-conda create -n venv python=3.6
+conda create -n env python=3.6
 ```
 
 激活虚拟环境
