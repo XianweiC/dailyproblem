@@ -24,3 +24,13 @@ with open('1.csv', 'w', newline='') as f:
     writer.writerows(rows)
 ```
 
+## 读取CSV
+
+```python
+with open('filename','r') as f:
+	reader = csv.reader(f)
+	for row in reader:
+		print(row)
+        print(type(row)) #<class 'list'>
+```
+

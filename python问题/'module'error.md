@@ -1,8 +1,6 @@
 # TypeError: 'module' object is not callable 原因分析                
 
   原因分析：
-**Python导入模块的方法有两种：import module 和 from module import，**
+**Python导入模块的方法有两种：import module 和 from module import  ...，**
 
 **区别是前者所有导入的东西使用时需加上模块名的限定，而后者不要。 **
-
-s
