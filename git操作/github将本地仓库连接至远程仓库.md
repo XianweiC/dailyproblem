@@ -18,3 +18,10 @@ To https://github.com/Monster-c/dailyproblem.git
 Branch 'master' set up to track remote branch 'master' from 'origin'.
 ```
 
+
+
+```bash
+git强制将本地仓库覆盖到远程仓库
+git push -f --set-upstream origin master:master
+```
+
