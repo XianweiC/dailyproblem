@@ -2,7 +2,7 @@
 
 ## 引言：
 
-在进行深度学习过程中，需要经常切换环境，虽然在命令行可以使用`conda activate env-name`来激活环境，但是却不知从哪里修改`jupyter-notebook`的内核。下面进行整理
+在进行深度学习过程中，需要经常切换环境，虽然在命令行可以使用`conda activate env-name`来激活环境，但是却不知从哪里修改`jupyter-notebook`的内核。下面进行整理。
 
 
 
