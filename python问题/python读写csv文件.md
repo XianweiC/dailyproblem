@@ -1,4 +1,4 @@
-# python读写csv文件
+# `python`读写`csv`文件
 
 ## 直接上代码
 
@@ -24,6 +24,7 @@ with open('1.csv', 'w', newline='') as f:
     writer.writerows(rows)
 ```
 
+<<<<<<< HEAD
 ## 读取CSV
 
 ```python
@@ -32,5 +33,29 @@ with open('filename','r') as f:
 	for row in reader:
 		print(row)
         print(type(row)) #<class 'list'>
+=======
+## 出现一个字符占一个单元格
+
+这种情况是由于在写入时数据类型是字符串而不是列表
+
+解决方法
+
+转换成列表
+
+```python
+writer.writerow([head])
+```
+
+
+
+## 写入`csv`有时会出现空行
+
+解决方法
+
+加上`newline=''`
+
+```python
+open('filename','w',newline='')
+>>>>>>> b6a7329 (2021/1/13)
 ```
 
