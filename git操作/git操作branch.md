@@ -23,5 +23,7 @@ git merge [branch]
 git branch -d [branch-name]
 
 # 删除远程分支$ 
-git push origin --delete [branch-name]$ git branch -dr [remote/branch]
+git push origin :[branch-name] #冒号即代表删除
+#或
+git push origin --delete [branch-name]
 ```
