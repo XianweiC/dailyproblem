@@ -1,4 +1,4 @@
-# git中操作branch的命令
+# git操作branch
 
 ```bash
 # 列出所有本地分支
