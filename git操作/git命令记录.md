@@ -14,8 +14,6 @@ sudo apt-get install git
 
 
 
-
-
 git log
 #查看日志，记录了版本号，方便进行回滚
 
