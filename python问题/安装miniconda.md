@@ -1,6 +1,8 @@
-## Ubuntu安装miniconda
+## 安装miniconda
 
-下载并安装
+## 1.`ubuntu`
+
+1> 下载并安装
 
 ```bash
 sudo apt-get install wget
@@ -21,13 +23,15 @@ Do you wish the installer to initialize Miniconda3 by running conda init? [yes|n
 [no] >>> yes
 ```
 
-运行配置信息文件或重启电脑
+2> 运行配置信息文件或重启电脑
 
 ```bash
 source ~/.bashrc
+#如果是zsh 
+source ~/zshrc
 ```
 
-测试是否安装成功
+3> 测试是否安装成功
 
 ```bash
 conda --version
@@ -42,7 +46,7 @@ conda create -n env python=3.6
 激活虚拟环境
 
 ```bash
-conda activate venv
+conda activate env
 ```
 
 退出虚拟环境
@@ -50,3 +54,31 @@ conda activate venv
 ```bash
 conda deactivate
 ```
+
+---
+
+## 2.`win`
+
+1> 下载miniconda安装包（推荐清华镜像站下载）
+
+```
+https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/
+```
+
+2> 进行安装
+
+3> 配置环境变量
+
+```
+D:/miniconda_home
+D:/miniconda/Library/bin
+D:/miniconda/Scripts
+```
+
+4>测试
+
+```bash
+cmd>conda -V
+conda 4.9.2
+```
+
