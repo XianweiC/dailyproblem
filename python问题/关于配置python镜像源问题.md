@@ -7,7 +7,7 @@ http://quotes.toscrape.com/
 
 
 镜像文件
-pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip3 install <name> -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 Timed Out
 pip --default-timeout=100 install 包名
