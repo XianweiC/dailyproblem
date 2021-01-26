@@ -38,6 +38,8 @@ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/f
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
 
 conda config --set show_channel_urls yes
+
+运行 conda clean -i 清除索引缓存，保证用的是镜像站提供的索引。
 ```
 
 换回默认源：

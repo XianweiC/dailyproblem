@@ -70,9 +70,11 @@ https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/
 3> 配置环境变量
 
 ```
-D:/miniconda_home
-D:/miniconda/Library/bin
-D:/miniconda/Scripts
+D:\miniconda
+D:\miniconda\Library\mingw-w64\bin
+D:\miniconda\Library\usr\bin
+D:\miniconda\Library\bin
+D:\miniconda\Scripts
 ```
 
 4>测试
