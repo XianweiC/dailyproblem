@@ -37,9 +37,6 @@ conda install python=3.5
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
 
-# 阿里
-conda config --add channels http://mirrors.aliyun.com/pypi/simple/
-
 conda config --set show_channel_urls yes
 ```
 
