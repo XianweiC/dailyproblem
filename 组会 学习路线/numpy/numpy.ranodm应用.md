@@ -114,77 +114,37 @@ array([1, 1, 1, 1, 1])
 ```python
 print('-----------random_sample--------------')
 
-
-
 print(np.random.random_sample(size=(2,2)))
-
-
 
 print('-----------random--------------')
 
-
-
 print(np.random.random(size=(2,2)))
-
-
 
 print('-----------ranf--------------')
 
-
-
 print(np.random.ranf(size=(2,2)))
 
-
-
 print('-----------sample--------------')
-
-
 
 print(np.random.sample(size=(2,2)))
 -----------random_sample--------------
 
-
-
 [[ 0.34966859  0.85655008]
-
-
-
  [ 0.16045328  0.87908218]]
-
-
 
 -----------random--------------
 
-
-
 [[ 0.25303772  0.45417512]
-
-
-
  [ 0.76053763  0.12454433]]
-
-
 
 -----------ranf--------------
 
-
-
 [[ 0.0379055   0.51288667]
-
-
-
  [ 0.71819639  0.97292903]]
-
-
 
 -----------sample--------------
 
-
-
 [[ 0.59942807  0.80211491]
-
-
-
  [ 0.36233939  0.12607092]]
 ```
 
@@ -207,31 +167,14 @@ np.random.choice(5, 3, replace=False)
 array([0, 3, 1])
 np.random.choice(5,size=(3,2))
 array([[1, 0],
-
-
-
        [4, 2],
-
-
-
        [3, 3]])
 demo_list = ['lenovo', 'sansumg','moto','xiaomi', 'iphone']
 
-
-
 np.random.choice(demo_list,size=(3,3))
 array([['moto', 'iphone', 'xiaomi'],
-
-
-
        ['lenovo', 'xiaomi', 'xiaomi'],
-
-
-
        ['xiaomi', 'lenovo', 'iphone']],
-
-
-
       dtype='<U7')
 ```
 
@@ -241,21 +184,10 @@ array([['moto', 'iphone', 'xiaomi'],
 ```python
 demo_list = ['lenovo', 'sansumg','moto','xiaomi', 'iphone']
 
-
-
 np.random.choice(demo_list,size=(3,3), p=[0.1,0.6,0.1,0.1,0.1])
 array([['sansumg', 'sansumg', 'sansumg'],
-
-
-
        ['sansumg', 'sansumg', 'sansumg'],
-
-
-
        ['sansumg', 'xiaomi', 'iphone']],
-
-
-
       dtype='<U7')
 ```
 
@@ -267,19 +199,13 @@ array([['sansumg', 'sansumg', 'sansumg'],
 ```python
 np.random.seed(0)
 
-
-
 np.random.rand(5)
 array([ 0.5488135 ,  0.71518937,  0.60276338,  0.54488318,  0.4236548 ])
 np.random.seed(1676)
 
-
-
 np.random.rand(5)
 array([ 0.39983389,  0.29426895,  0.89541728,  0.71807369,  0.3531823 ])
 np.random.seed(1676)
-
-
 
 np.random.rand(5)
 array([ 0.39983389,  0.29426895,  0.89541728,  0.71807369,  0.3531823 ])    
