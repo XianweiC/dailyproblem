@@ -4,8 +4,6 @@
 
 由于在课程设计中需要用到mysql，因此总结一下mysql的触发器建立过程
 
-
-
 ```sql
 CREATE TRIGGER <trigger_name>
 BEFORE | AFTER
