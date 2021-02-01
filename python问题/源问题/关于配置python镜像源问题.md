@@ -5,6 +5,10 @@
 ```
 http://quotes.toscrape.com/
 
+# pip从依赖文件中批量安装
+pip freeze > <filename>
+
+pip install -r <filename>
 
 镜像文件
 pip3 install <name> -i https://pypi.tuna.tsinghua.edu.cn/simple
@@ -24,7 +28,7 @@ Python官方：https://pypi.python.org/simple
 
 v2ex：http://pypi.v2ex.com/simple
 
-阿里云：http://mirrors.aliyun.com/pypi/simple
+阿里云：https://mirrors.aliyun.com/pypi/simple
 
 清华大学：https://pypi.tuna.tsinghua.edu.cn/simple
 
