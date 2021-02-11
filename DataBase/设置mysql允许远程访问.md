@@ -18,9 +18,9 @@ flush privileges;
 注意：最后一句很重要，目的是使修改生效，如果没有写，则还是不能进行远程连接。
 
 2.授权用户，允许从任何主机连接到mysql数据库。
-grant all privileges on *.* to 'root'@'%' identified by 'pwd' with grant option;
+grant all privileges on \*.* to 'root'@'%' identified by 'pwd' with grant option;
 flush privileges;
 
 如果只是允许用户从ip为192.168.1.104的主机连接到mysql服务器。
-grant all privileges on *.* to 'root'@'%192.168.1.104' identified by 'Fmty_888_!@#' with grant option;
+grant all privileges on *.* to 'root'@'%192.168.1.104' identified by 'ip'@''#' with grant option;
 flush privileges;
