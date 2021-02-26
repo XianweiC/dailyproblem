@@ -1,18 +1,31 @@
 # 关于配置python镜像源问题
 
-
-
 ```
+
+
 http://quotes.toscrape.com/
 
 # pip从依赖文件中批量安装
+
 pip freeze > <filename>
 
 pip install -r <filename>
 
 镜像文件
 pip3 install <name> -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
 
+
+
+```
+torch安装问题
+
+ pip install torch==1.6.0 -f https://download.pytorch.org/whl/torch_stable.html
+```
+
+
+
+```
 Timed Out
 pip --default-timeout=100 install 包名
 
@@ -37,6 +50,5 @@ v2ex：http://pypi.v2ex.com/simple
 中国科学院：http://pypi.mirrors.opencas.cn/simple
 
 douban：http://pypi.douban.com/simple
-
 ```
 
