@@ -5,7 +5,7 @@
 ```css
 
 //首行缩进
-text-index:2em;
+text-indent:2em;
 
 //字间距
 letter-spacing:
