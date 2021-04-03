@@ -47,3 +47,25 @@ function blob2array(blob) {
     }
 ```
 
+ File对象转base64
+
+```javascript
+  let reader = new FileReader();
+  reader.readAsDataURL(file[0])
+  console.log(reader)
+```
+
+base64 转成blob 上传
+
+```javascript
+function dataURItoBlob(dataURI) {  
+    var byteString = atob(dataURI.split(',')[1]);  
+    var mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0];  
+    var ab = new ArrayBuffer(byteString.length);  
+    var ia = new Uint8Array(ab);  
+    for (var i = 0; i < byteString.length; i++) {  
+        ia[i] = byteString.charCodeAt(i);  
+    }  
+    return new Blob([ab], {type: mimeString});  
+}
+```
