@@ -89,33 +89,21 @@ cordova build android --release --keystore="folkmusic.keystore" --alias=flokmusi
 
 
 
-
-
-
-
-
-
-
-
 -----
 
 
 
+## 问题：
 
-
-
-
-
-
-
+### 一开始无法联网
 
 出现这种原因是因为我安装的android sdk是属于高版本的，在高版本的android sdk中默认开启了对非加密的明文传输的保护，我们无法通过http网络请求的方式获取数据。
 
 解决方案如下（取一即可）：
 
-\1. android sdk27及以上有这种限制，可以将android sdk降低到26版本。降低android版本可以通过命令cordova platform remove android 再 cordova platform add  android@6.3.0,当我们打包时候就会自动给我们下载安装对应版本。
+1. android sdk27及以上有这种限制，可以将android sdk降低到26版本。降低android版本可以通过命令cordova platform remove android 再 cordova platform add  android@6.3.0,当我们打包时候就会自动给我们下载安装对应版本。
 
-\2. 在目录project\platforms\android\res\xml添加文件`network-security-config.xml,插入内容如下`
+2. 在目录project\platforms\android\res\xml添加文件`network-security-config.xml,插入内容如下`
 
 ```
 <?xml version="1.0" encoding="utf-8"?>
@@ -138,11 +126,10 @@ cordova build android --release --keystore="folkmusic.keystore" --alias=flokmusi
 </manifest>
 ```
 
-\3. 可以使用https调用数据接口
+3. 可以使用https调用数据接口
+4. 在AnroidManifest.xml中的application添加设置项：
 
-4.在AnroidManifest.xml中的application添加设置项：
-
-```
+```xml
 <application android:usesCleartextTraffic="true">
 ```
 
@@ -152,15 +139,7 @@ cordova build android --release --keystore="folkmusic.keystore" --alias=flokmusi
 
 
 
-
-
-
-
-
-
-
-
-# 打包无法获取权限问题
+## 打包无法获取权限问题
 
 1.安装插件
 
