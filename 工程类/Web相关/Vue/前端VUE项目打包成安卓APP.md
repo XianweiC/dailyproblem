@@ -2,31 +2,24 @@
 
 
 
-## 1.打包vue项目，在项目的根目录执行命令 npm run build,直至项目打包完成
+1. 打包vue项目，在项目的根目录执行命令 npm run build,直至项目打包完成
 
+2. 新建cordova项目
 
+   1. 安装cordova，命令行执行 npm install -g cordova
+   2. 利用cordova创建一个新项目，命令行执行 cordova create folkmusic com.music.folkmusic musicapp
 
-## 2.新建cordova项目
+3. 打包cordova项目，在根目录执行命令 cordova platforms add android --save
 
-### 2.1安装cordova，命令行执行 npm install -g cordova
+4. 在根目录下执行 cordova build android生成apk文件
 
-### 2.2利用cordova创建一个新项目，命令行执行 cordova create folkmusic com.music.folkmusic musicapp
+5. 检查环境是否已经准备就绪，执行命令 cordova requirements
 
-## 3.打包cordova项目，在根目录执行命令 cordova platforms add android --save
+6. 打包apk
 
-## 4.在根目录下执行 cordova build android生成apk文件
+   1. 生成签名证书
 
-
-
-## 5.检查环境是否已经准备就绪，执行命令 cordova requirements
-
-
-
-## 6.打包apk
-
-### 6.1生成签名证书
-
-在命令行执行
+      在命令行执行
 
 ```
 keytool -genkey -v -keystore folkmusic.keystore -alias flokmusic -keyalg RSA -validity 36500
@@ -36,35 +29,27 @@ keytool -genkey -v -keystore folkmusic.keystore -alias flokmusic -keyalg RSA -va
 
 然后根据提示输入所需录入的信息
 
-
-
 成功之后会在目录下面生成一个证书文件
 
+7. apk签名
 
+   签名的方式有两种：
 
-### 6.2apk签名
+   1.生成未签名的debug版本的apk，然后再用命令进行签名
 
-签名的方式有两种：
+   在根目录执行命令 cordova build android --release
 
-1.生成未签名的debug版本的apk，然后再用命令进行签名
+   成功之后会在release目录下面生成一个app-release-unsigned.apk的文件
 
-在根目录执行命令 cordova build android --release
+   将签名所生成的证书文件复制到该目录之下执行命令 jarsigner -verbose -sigalg SHA1withRSA  -digestalg SHA1 -keystore folkmusic.keystore app-release-unsigned.apk  folkmusic
 
-成功之后会在release目录下面生成一个app-release-unsigned.apk的文件
+   2.直接生产签名的apk文件
 
-将签名所生成的证书文件复制到该目录之下执行命令 jarsigner -verbose -sigalg SHA1withRSA  -digestalg SHA1 -keystore folkmusic.keystore app-release-unsigned.apk  folkmusic
-
-如果出现找不到证书链多半是证书的别名写错了。笔者就是前期的别名取得是flokmusic后面输入的是folkmusic而出错。
-
-2.直接生产签名的apk文件
-
-在命令行执行
+   在命令行执行
 
 ```
 cordova build android --release --keystore="folkmusic.keystore" --alias=flokmusic --storePassword=123456 --password=123456
 ```
-
-
 
 同样会在release目录下面生成一个apk文件，并且是已经签名了的文件。
 
@@ -87,15 +72,11 @@ cordova build android --release --keystore="folkmusic.keystore" --alias=flokmusi
 
 配置好之后以后打包就可以直接执行打包命令 cordova build android --release生成一个代签名的apk文件了
 
-
-
 -----
-
-
 
 ## 问题：
 
-### 一开始无法联网
+### 1.无法联网
 
 出现这种原因是因为我安装的android sdk是属于高版本的，在高版本的android sdk中默认开启了对非加密的明文传输的保护，我们无法通过http网络请求的方式获取数据。
 
@@ -137,9 +118,7 @@ cordova build android --release --keystore="folkmusic.keystore" --alias=flokmusi
 
 ---
 
-
-
-## 打包无法获取权限问题
+## 2.打包无法获取权限问题
 
 1.安装插件
 
