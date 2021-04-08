@@ -5,7 +5,7 @@
 先看一段代码：
 
 ```jsp
-<%@ page Encoding="UTF-8" contentType="text/html;charset=UTF-8"%>
+<%@ page pageEncoding="UTF-8" contentType="text/html;charset=UTF-8"%>
 ```
 
 ```java
@@ -15,7 +15,7 @@ response.setCharacterEncoding("UTF-8");
 response.setContentType("text/html;charset=UTF-8");
 ```
 
-## 1.**`page Encoding=”UTF-8”`**
+## 1.**`pageEncoding=”UTF-8”`**
 
 作用是设置`JSP`页面本身的编码，也就是编译成`Servlet`时使用的编码。 
 
