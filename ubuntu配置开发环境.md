@@ -45,7 +45,7 @@ sudo apt isntall git vim openssh-server net-tools curl
 ## install zsh
 
 ```bash
-sudo apt isntall -y zsh
+sudo apt install -y zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 # 如果报错
 # curl: (7) Failed to connect to raw.githubusercontent.com port 443: Connection refused
