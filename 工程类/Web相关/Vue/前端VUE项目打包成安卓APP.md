@@ -1,25 +1,26 @@
-## 前端VUE项目打包成安卓APP
+# 前端VUE项目打包成安卓APP
 
 
 
-1. 打包vue项目，在项目的根目录执行命令 npm run build,直至项目打包完成
+## 1.打包vue项目，在项目的根目录执行命令 npm run build,直至项目打包完成
 
-2. 新建cordova项目
+## 2.新建cordova项目
 
-   1. 安装cordova，命令行执行 npm install -g cordova
-   2. 利用cordova创建一个新项目，命令行执行 cordova create folkmusic com.music.folkmusic musicapp
+### 	1.安装cordova，命令行执行 npm install -g cordova
 
-3. 打包cordova项目，在根目录执行命令 cordova platforms add android --save
+### 	2.利用cordova创建一个新项目，命令行执行 cordova create folkmusic com.music.folkmusic musicapp
 
-4. 在根目录下执行 cordova build android生成apk文件
+## 3.打包cordova项目，在根目录执行命令 cordova platforms add android --save
 
-5. 检查环境是否已经准备就绪，执行命令 cordova requirements
+## 4.在根目录下执行 cordova build android生成apk文件
 
-6. 打包apk
+## 5.检查环境是否已经准备就绪，执行命令 cordova requirements
 
-   1. 生成签名证书
+## 6.打包apk
 
-      在命令行执行
+1. 生成签名证书
+
+   在命令行执行
 
 ```
 keytool -genkey -v -keystore folkmusic.keystore -alias flokmusic -keyalg RSA -validity 36500
@@ -31,24 +32,30 @@ keytool -genkey -v -keystore folkmusic.keystore -alias flokmusic -keyalg RSA -va
 
 成功之后会在目录下面生成一个证书文件
 
-7. apk签名
+## 7.apk签名
 
-   签名的方式有两种：
+签名的方式有两种：
 
-   1.生成未签名的debug版本的apk，然后再用命令进行签名
+### 1.生成未签名的debug版本的apk，然后再用命令进行签名
 
-   在根目录执行命令 cordova build android --release
+在根目录执行命令 cordova build android --release
 
-   成功之后会在release目录下面生成一个app-release-unsigned.apk的文件
+成功之后会在release目录下面生成一个app-release-unsigned.apk的文件
 
-   将签名所生成的证书文件复制到该目录之下执行命令 jarsigner -verbose -sigalg SHA1withRSA  -digestalg SHA1 -keystore folkmusic.keystore app-release-unsigned.apk  folkmusic
-
-   2.直接生产签名的apk文件
-
-   在命令行执行
+将签名所生成的证书文件复制到该目录之下执行命令 
 
 ```
-cordova build android --release --keystore="folkmusic.keystore" --alias=flokmusic --storePassword=123456 --password=123456
+jarsigner -verbose -sigalg SHA1withRSA  -digestalg SHA1 -keystore VoiceCare.keystore app-release-unsigned.apk VoiceCare
+```
+
+
+
+### 2.直接生产签名的apk文件
+
+在命令行执行
+
+```
+cordova build android --release --keystore="VoiceCare.keystore" --alias=VoiceCare --storePassword=123456 --password=123456
 ```
 
 同样会在release目录下面生成一个apk文件，并且是已经签名了的文件。
@@ -57,12 +64,12 @@ cordova build android --release --keystore="folkmusic.keystore" --alias=flokmusi
 
 在项目的根目录下面新建一个build.json文件，在里面配置证书的一些配置信息
 
-```
+```json
 {
   "android": {
     "release": {
-    "keystore": "folkmusic.keystore",
-    "alias": "flokmusic",
+    "keystore": "VoiceCare.keystore",
+    "alias": "VoiceCare",
     "storePassword": "123456",
     "password": "123456"
     }
