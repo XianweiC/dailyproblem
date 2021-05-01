@@ -26,6 +26,9 @@ conda active 'envname'
 conda install python=<version>
 #例如：
 conda install python=3.5
+
+# 更新conda版本
+conda update -n base -c defaults conda
 ```
 
 ## 更改镜像源
