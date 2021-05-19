@@ -2,4 +2,5 @@
 
 
 
-官方是使用 **Get-PoshThemes** 查看支持主题；**Set-PoshPrompt paradox** 设置主题。
+官方是使用 **Get-PoshThemes** 查看支持主题；**Set-PoshPrompt <theme name>** 设置主题。
+
