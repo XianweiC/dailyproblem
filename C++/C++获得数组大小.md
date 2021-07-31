@@ -49,7 +49,9 @@ using namespace std;
 int main()
 {
     int a[] = {0,1,2,3,4};
-    int array[][3] = {{1,2,3},{4,5,6}};
+    int array[][3] = {{1,2,3},
+                      {4,5,6}
+                     };
 
     int lengths = length(array);
     cout<<lengths<<endl;
