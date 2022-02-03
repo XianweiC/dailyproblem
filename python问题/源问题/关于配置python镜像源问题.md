@@ -1,8 +1,6 @@
 # 关于配置python镜像源问题
 
 ```
-
-
 http://quotes.toscrape.com/
 
 # pip从依赖文件中批量安装
@@ -52,3 +50,40 @@ v2ex：http://pypi.v2ex.com/simple
 douban：http://pypi.douban.com/simple
 ```
 
+
+
+
+
+```shell
+pip install <package> -i <url>
+```
+
+如果我们需要修改pip的配置文件永久地更改pip的镜像源。
+ pip的配置文件在linux系统中为：
+
+```shell
+~/.pip/pip.conf
+```
+
+在windows系统中为：
+
+```shell
+C:\Users\{YourNanme}\AppData\Roaming\pip\pip.ini
+```
+
+若上述配置文件不存在，则手动创建。
+ 也可通过下面的命令查看配置文件位置：
+
+```shell
+pip -v config list
+```
+
+找到pip的配置文件后，以阿里云镜像为例，修改文件内容为：
+
+```shell
+[global]
+index-url=http://mirrors.aliyun.com/pypi/simple/
+trusted-host=mirrors.aliyun.com
+```
+
+保存配置文件，则完成了对pip默认镜像源的更换。
