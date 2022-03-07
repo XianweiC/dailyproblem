@@ -14,7 +14,8 @@ sort(begin, end)
 
 struct Student s[100]
 //使用重载的函数来自定义排序方法
-sort(s, s+100, compare())
+//切记重载放法不要括号
+sort(s, s+100, compare)
 
 bool compare(Student a, Student b)
 {
