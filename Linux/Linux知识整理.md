@@ -34,17 +34,3 @@ ps(process status)，用来查看当前运行的进程状态
 
 
 
-软件
-
-```
-#
-sudo apt install 
-	vim 
-	curl 
-	net-tools
-    gnome-shell-extension-manager
-	flameshot
-```
-
-
-
