@@ -34,3 +34,18 @@ ps(process status)，用来查看当前运行的进程状态
 
 
 
+## `ln`链接
+
+建立软链接（相当于快捷方式）
+
+```shell
+ln -s 'target_file' 'tagert_location'
+```
+
+
+
+## `unzip`解压
+
+```shell
+unzip -O 编码格式(CP936/GBK/GB18030) xxx.zip -d /xxx/xxx
+```
