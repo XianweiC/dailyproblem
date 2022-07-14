@@ -21,6 +21,7 @@ sudo dpkg -l sofrware_name
 删除安装残留
 
 ```shell
+sudo apt remove --purge software_name
 sudo dpkg -r software_name
 ```
 
